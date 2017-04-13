@@ -1,0 +1,21 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - yarn
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies... it wont install anything
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo running test
+      - yarn
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - HelloWorld.js
