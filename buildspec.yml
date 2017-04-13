@@ -4,13 +4,14 @@ phases:
   install:
     commands:
       - echo Installing dependencies...
-      - yarn
+      - npm install --global yarn
   pre_build:
     commands:
       - echo Installing source NPM dependencies... it wont install anything
+      - yarn
   build:
     commands:
-      - echo Build started on `date`
+      - echo test started on `date`
       - echo running test
       - yarn
   post_build:
